@@ -18,7 +18,7 @@ import javax.persistence.Table;
 * @created 2014-10-1 
 */
 @Entity
-@Table(name = "mt_Location ")
+@Table(name = "mt_location ")
 public class MTLocation implements java.io.Serializable,java.io.Closeable{
 
 	/**

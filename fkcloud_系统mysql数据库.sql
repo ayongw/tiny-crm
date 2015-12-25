@@ -628,7 +628,7 @@ CREATE TABLE IF NOT EXISTS `tp_users` (
 --
 
 INSERT INTO `tp_users` (`S_USERCODE`, `D_BIRTHDAY`, `S_ADMINFLAG`, `S_EMAIL`, `S_EMAILVALFLAG`, `S_LASTLOGINIP`, `S_PROJGENPATH`, `S_REGIP`, `S_REGUSERCODE`, `S_SEX`, `S_USERNAME`, `S_USERPWD`, `S_USERSTATE`, `TS_LASTLOGIN`, `TS_REGDATETIME`, `TS_SYSUPDATE`) VALUES
-('0d48adc5-c92d-431b-8e35-bb1f05a3dbaf', '2014-10-30', '1', 'zhongefeng@163.com', '1', '127.0.0.1', NULL, '127.0.0.1', NULL, '1', 'admin', 'f865b53623b121fd34ee5426c792e5c33af8c227', '1', '2014-10-11 13:11:09', '2014-10-11 10:28:05', '2014-10-11 13:11:09');
+('0d48adc5-c92d-431b-8e35-bb1f05a3dbaf', '2014-10-30', '1', 'zhongefeng@163.com', '1', '127.0.0.1', NULL, '127.0.0.1', NULL, '1', 'admin', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '1', '2014-10-11 13:11:09', '2014-10-11 10:28:05', '2014-10-11 13:11:09');
 
 -- --------------------------------------------------------
 

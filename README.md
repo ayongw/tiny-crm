@@ -6,7 +6,7 @@
 交流群：302138322 <br />
 qq：769022563（加Q请带备注信息）<br />
 E-mail：769022563@qq.com<br />
-有疑问可以Q我或者给我发邮件，平时上班时间不登QQ<br />
+有疑问可以Q我或者给我发邮件，平s时上班时间不登QQ<br />
 微信公众号<br>
 ![FrankFactory](http://mobilecloud.duapp.com/common/images/mobilefieldwork/images/code.png)
 
@@ -32,7 +32,8 @@ E-mail：769022563@qq.com<br />
 ### 前端：<br />
 * jquery + jquery easyui1.4<br />
  
- 
+### init user & password
+	admin:password 
  
 
  
