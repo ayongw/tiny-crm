@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `mt_appinfo` (
   `FVersionCode` varchar(50) NOT NULL,
   `FVersionName` varchar(50) NOT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `mt_company` (
   `Tel` varchar(20) DEFAULT NULL,
   `WebSite` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `mt_dept` (
   `ParentID` bigint(20) NOT NULL,
   `Remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `mt_empdevice` (
   `DeviceUID` varchar(80) NOT NULL,
   `RegDate` datetime DEFAULT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `mt_feedback` (
   `Status` bigint(20) DEFAULT NULL,
   `Title` varchar(125) NOT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `mt_location` (
   `RecDateTime` datetime DEFAULT NULL,
   `Remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`LocID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `mt_point` (
   `PointTypeID` bigint(20) NOT NULL,
   `Status` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`PointID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `mt_pointtype` (
   `PointTypeID` bigint(20) NOT NULL AUTO_INCREMENT,
   `PointTypeName` varchar(125) NOT NULL,
   PRIMARY KEY (`PointTypeID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `mt_worklog` (
   `PlanID` bigint(20) NOT NULL,
   `Title` varchar(125) NOT NULL,
   PRIMARY KEY (`WorkID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `mt_workplan` (
   `SubmitDateTime` datetime DEFAULT NULL,
   `Title` varchar(125) NOT NULL,
   PRIMARY KEY (`PlanID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -242,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `tl_log` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`I_LOGID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=205 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=205 ;
 
 --
 -- 转存表中的数据 `tl_log`
@@ -471,7 +471,7 @@ CREATE TABLE IF NOT EXISTS `tp_datatype` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`I_ENUMCLASS`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -491,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `tp_dbquery` (
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`S_DBTYPE`),
   UNIQUE KEY `S_DBTYPE` (`S_DBTYPE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -507,7 +507,7 @@ CREATE TABLE IF NOT EXISTS `tp_enumdata` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`S_ENUMCODE`,`I_ENUMCLASS`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -529,7 +529,7 @@ CREATE TABLE IF NOT EXISTS `tp_frame` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`I_FRAMECODE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -543,7 +543,7 @@ CREATE TABLE IF NOT EXISTS `tp_menu` (
   `S_MENUNAME` varchar(42) DEFAULT NULL,
   `S_MENUURL` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`I_MENUID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `tp_menu`
@@ -580,7 +580,7 @@ CREATE TABLE IF NOT EXISTS `tp_project` (
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`S_PROJCODE`),
   UNIQUE KEY `S_PROJCODE` (`S_PROJCODE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -594,7 +594,7 @@ CREATE TABLE IF NOT EXISTS `tp_systemconfig` (
   `S_PROJNAME` varchar(21) DEFAULT NULL,
   PRIMARY KEY (`S_PROJCODE`),
   UNIQUE KEY `S_PROJCODE` (`S_PROJCODE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -621,7 +621,7 @@ CREATE TABLE IF NOT EXISTS `tp_users` (
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`S_USERCODE`),
   UNIQUE KEY `S_USERCODE` (`S_USERCODE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `tp_users`
@@ -652,7 +652,7 @@ CREATE TABLE IF NOT EXISTS `ts_column` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`I_COLUMNID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -669,7 +669,7 @@ CREATE TABLE IF NOT EXISTS `ts_table` (
   `TS_STARTDATE` datetime DEFAULT NULL,
   `TS_SYSUPDATE` datetime DEFAULT NULL,
   PRIMARY KEY (`I_TABLEID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -687,7 +687,7 @@ CREATE TABLE IF NOT EXISTS `t_wxuser` (
   `FUSERID` varchar(50) NOT NULL,
   `FWEIXINNO` varchar(50) NOT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
